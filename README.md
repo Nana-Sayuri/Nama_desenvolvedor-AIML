@@ -2,7 +2,7 @@
 
 
 Sayuri é um Mini Bot de testes desenvolvido em AIML na plataforma "Pandorabots".
-Features
+
 - Captura o nome do cliente
 - Persiste o nome em uma váriavel para uso futuro
 - Devolve o nome quando solicitado
