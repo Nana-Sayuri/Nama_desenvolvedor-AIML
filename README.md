@@ -1,4 +1,4 @@
-# Nama_desenvolvedor-AIML
+# Chatbot Sayuri
 
 
 Sayuri é um Mini Bot de testes desenvolvido em AIML na plataforma "Pandorabots".
