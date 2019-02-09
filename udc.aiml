@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+    
+  <category>
+    <pattern>*</pattern>
+    <template><random>
+        <li>Não entendi, pode falar de outra forma?</li>
+        <li>Ainda estou aprendendo... 
+            Mas consigo contar um intervalo de números, que tal?</li>
+        </random>
+      </template>
+  </category>
+  
+    
+</aiml>

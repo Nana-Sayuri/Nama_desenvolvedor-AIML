@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+    <category>
+        <pattern>OI</pattern>
+        <template>Olá, como você <set name="topic">chama</set>?</template>
+    </category>
+
+
+<!-- 'OI' VARIATIONS -->
+	
+    <category>
+        <pattern>OI ^</pattern>
+        <template><srai>OI</srai></template>    
+    </category>
+  
+    <category><pattern>OLA ^</pattern>
+        <template><srai>OI</srai></template>
+    </category>
+  
+    <category><pattern>OLÁ ^</pattern>
+        <template><srai>OI</srai></template>
+    </category>
+
+    <category>
+        <pattern>HI ^</pattern>
+        <template><srai>OI</srai></template>
+    </category>
+  
+    <category>
+        <pattern>EAI ^</pattern>
+        <template><srai>OI</srai></template>
+    </category>  
+
+    <category>
+        <pattern>HEY ^</pattern>
+        <template><srai>OI</srai></template>
+    </category>    
+
+<!-- END OF 'OI' VARIATIONS -->
+
+
+    <topic name="chama">
+        <category>
+            <pattern>*</pattern>
+            <template>Fala aí <set name="NomeDaPessoa"><star/></set>, como posso te ajudar?
+                <think><set name="topic">*</set></think>    
+            </template>
+        </category>
+    </topic>
+    
+    <category>
+        <pattern>COMO E MEU NOME</pattern>
+        <template>
+            <condition name="NomeDaPessoa">
+                <li value="*">
+                    <random>
+                        <li><get name="NomeDaPessoa"></get>!</li>
+                        <li>Seu nome é <get name="NomeDaPessoa"></get></li>
+                        <li>Tá esquecido hein <get name="NomeDaPessoa"></get></li>
+                        <li>Oxe <get name="NomeDaPessoa"></get>, comeu água foi?</li>
+                        <li>Qual foi <get name="NomeDaPessoa"></get>, andou comendo queijo?</li>
+                        <li>Qual foi <get name="NomeDaPessoa"></get>, tá me tirando?</li>
+                        <li>Lá vamos nós de novo com essa brincadeira né <get name="NomeDaPessoa"></get></li>
+                    </random>
+                        <think><set name="topic">*</set></think>
+                </li>
+                <li>Você ainda não me disse o seu nome. Me conte aí
+                    <think><set name="topic">chama</set></think>
+                </li>
+            </condition>
+        </template>
+    </category>
+    
+    
+    <category>
+        <pattern>MEU NOME É *</pattern>
+        <template>Fala aí <set name="NomeDaPessoa"><star/></set>, como posso te ajudar?</template>
+    </category>
+
+
+<!-- 'COMO É MEU NOME' VARIANTIONS -->
+
+    <category>
+        <pattern>COMO ^ MEU NOME</pattern>
+        <template><srai>COMO E MEU NOME</srai></template>
+    </category>
+
+    <category>
+        <pattern>QUAL ^ MEU NOME</pattern>
+        <template><srai>COMO E MEU NOME</srai></template>
+    </category>
+
+    <category>
+        <pattern>DIGA MEU NOME</pattern>
+        <template><srai>COMO E MEU NOME</srai></template>
+    </category>
+
+    <category>
+        <pattern>LEMBRA ^ MEU NOME</pattern>
+        <template><srai>COMO E MEU NOME</srai></template>
+    </category>
+
+</aiml>

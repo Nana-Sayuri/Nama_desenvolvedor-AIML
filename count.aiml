@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+    <category>
+    <pattern>CONTE DE <set>number</set> * <set>number</set></pattern>
+    <template>
+      <think><set name="count"><star/></set></think>
+      <get name="count"/>
+      <condition name="count">
+        <li><value><star index="3"/></value></li>
+        <li>
+          <set name="count"> <map><name>successor</name><get name="count"/></map>
+          </set> <loop/>
+        </li>
+      </condition>
+    </template>
+    </category>
+	
+</aiml>
